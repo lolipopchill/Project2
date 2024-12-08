@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-API_KEY = 'yXcUn6haV3nAcW1UlLUlbe6LEozZwVUu'
+API_KEY = 'yXcUn6haV3nAcW1UlLUlbe6LEozZwVUu'   #лучше вставить свой ключ
 
 def get_weather_data(city, api_key):
     url = f"http://dataservice.accuweather.com/locations/v1/cities/search"
@@ -33,7 +33,6 @@ def get_weather_data(city, api_key):
     return None
 
 def is_bad_weather(weather_data):
-    """Определяем плохие погодные условия по температуре, ветру и осадкам."""
     if weather_data['temperature'] < -5 or weather_data['temperature'] > 35:
         return True
     if weather_data['wind_speed'] > 50:
