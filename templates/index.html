@@ -56,21 +56,6 @@
             color: red;
             margin-top: 20px;
         }
-<<<<<<< HEAD
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .dashboard-container {
-            width: 100%;
-            height: 600px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-=======
->>>>>>> 9d6e9dbc4965aab0eb80fa6cc4c5316b73c32081
     </style>
 </head>
 <body>
@@ -85,17 +70,6 @@
         <button type="submit">Получить прогноз</button>
     </form>
 
-<<<<<<< HEAD
-    <div class="container">
-        {% if weather_info_start and weather_info_end %}
-            <div class="dashboard-container">
-                <iframe src="/dashboard/" width="100%" height="600" frameborder="0"></iframe>
-            </div>
-        {% elif error_message %}
-            <p class="error-message">{{ error_message }}</p>
-        {% endif %}
-    </div>
-=======
     {% if weather_info_start and weather_info_end %}
         <div class="weather-info">
             <h2>Погода на маршруте</h2>
@@ -114,6 +88,5 @@
     {% elif error_message %}
         <p class="error-message">{{ error_message }}</p>
     {% endif %}
->>>>>>> 9d6e9dbc4965aab0eb80fa6cc4c5316b73c32081
 </body>
 </html>
