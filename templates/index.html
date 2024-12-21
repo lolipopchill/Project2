@@ -56,6 +56,7 @@
             color: red;
             margin-top: 20px;
         }
+<<<<<<< HEAD
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -68,6 +69,8 @@
             border-radius: 8px;
             overflow: hidden;
         }
+=======
+>>>>>>> 9d6e9dbc4965aab0eb80fa6cc4c5316b73c32081
     </style>
 </head>
 <body>
@@ -82,6 +85,7 @@
         <button type="submit">Получить прогноз</button>
     </form>
 
+<<<<<<< HEAD
     <div class="container">
         {% if weather_info_start and weather_info_end %}
             <div class="dashboard-container">
@@ -91,5 +95,25 @@
             <p class="error-message">{{ error_message }}</p>
         {% endif %}
     </div>
+=======
+    {% if weather_info_start and weather_info_end %}
+        <div class="weather-info">
+            <h2>Погода на маршруте</h2>
+            <p>Начальная точка: {{ weather_info_start.city }}</p>
+            <p>Температура: {{ weather_info_start.temperature }} °C</p>
+            <p>Скорость ветра: {{ weather_info_start.wind_speed }} м/с</p>
+            <p>Вероятность осадков: {{ weather_info_start.precipitation_probability }}%</p>
+            <p>Условие: {{ weather_condition_start }}</p>
+            <hr>
+            <p>Конечная точка: {{ weather_info_end.city }}</p>
+            <p>Температура: {{ weather_info_end.temperature }} °C</p>
+            <p>Скорость ветра: {{ weather_info_end.wind_speed }} м/с</p>
+            <p>Вероятность осадков: {{ weather_info_end.precipitation_probability }}%</p>
+            <p>Условие: {{ weather_condition_end }}</p>
+        </div>
+    {% elif error_message %}
+        <p class="error-message">{{ error_message }}</p>
+    {% endif %}
+>>>>>>> 9d6e9dbc4965aab0eb80fa6cc4c5316b73c32081
 </body>
 </html>
